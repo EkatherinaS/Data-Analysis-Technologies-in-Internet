@@ -1,0 +1,15 @@
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\bin\Debug\net6.0\Lab1.exe
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\bin\Debug\net6.0\Lab1.deps.json
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\bin\Debug\net6.0\Lab1.runtimeconfig.json
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\bin\Debug\net6.0\Lab1.dll
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\bin\Debug\net6.0\Lab1.pdb
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\Lab1.csproj.AssemblyReference.cache
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\Lab1.GeneratedMSBuildEditorConfig.editorconfig
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\Lab1.AssemblyInfoInputs.cache
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\Lab1.AssemblyInfo.cs
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\Lab1.csproj.CoreCompileInputs.cache
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\Lab1.dll
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\refint\Lab1.dll
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\Lab1.pdb
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\Lab1.genruntimeconfig.cache
+C:\StudyProjects\VisualStudioProjects\4 курс ТАДвСИ\Lab1\obj\Debug\net6.0\ref\Lab1.dll

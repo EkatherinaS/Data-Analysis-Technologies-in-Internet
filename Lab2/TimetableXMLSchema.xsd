@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:element name="timetable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="6" ref="weekday" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="weekday">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="subject" />
+			</xs:sequence>
+			<xs:attribute name="name" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="ПН|ВТ|СР|ЧТ|ПТ|СБ"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>	
+		
+	<xs:element name="subject">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="name" />
+				<xs:element ref="room" />
+				<xs:element ref="professor" />
+				<xs:element ref="time" />
+			</xs:all>
+			<xs:attribute name="type" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="лекция|практика"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="name" type="xs:string"/>
+	
+	<xs:element name="professor">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[А-Я]\w+ [А-Я].[А-Я]."/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="room">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="(\d+|\w+.)\[\d+\]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="time">
+		<xs:complexType>
+			<xs:attribute name="start" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="8:10|9:40|11:30|13:10|15:00|16:40|18:20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="finish" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="9:30|11:00|12:50|14:30|16:20|18:00|19:40"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

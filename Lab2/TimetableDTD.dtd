@@ -1,0 +1,12 @@
+﻿<!ELEMENT timetable (weekday+)>
+<!ELEMENT weekday (subject*)>
+<!ATTLIST weekday name (ПН|ВТ|СР|ЧТ|ПТ|СБ) #REQUIRED>
+<!ELEMENT subject (name, room, professor, time)>
+<!ATTLIST subject type (лекция|практика) #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT room (#PCDATA)>
+<!ELEMENT professor (#PCDATA)>
+<!ELEMENT time EMPTY>
+<!ATTLIST time start (8:10|9:40|11:30|13:10|15:00|16:40|18:20) #REQUIRED>
+<!ATTLIST time finish (9:30|11:00|12:50|14:30|16:20|18:00|19:40) #REQUIRED>
+<!ELEMENT type (#PCDATA)>

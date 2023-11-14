@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE timetable SYSTEM "TimetableDTD.dtd">
+
+<timetable>
+	<weekday name="ПН">
+		<subject type="лекция">
+			<name>Проектирование архитектуры программ.систем</name>
+			<room>102[3]</room>
+			<professor>Хаберев Е.А.</professor>
+			<time start="9:40" finish="11:00"/>
+		</subject>
+		<subject type="практика">
+			<name>Управление программными проектами</name>
+			<room>510[3]</room>
+			<professor>Шестакова Л.В.</professor>
+			<time start="11:30" finish="12:50"/>
+		</subject>
+		<subject type="практика">
+			<name>Научно-исследовательский семинар</name>
+			<room>510[3]</room>
+			<professor>Викентьева О.Л.</professor>
+			<time start="13:10" finish="14:30"/>
+		</subject>
+	</weekday>
+	<weekday name="ВТ">
+		<subject type="лекция">
+			<name>Технологии и алгоритмы высокопроизводительных вычислений</name>
+			<room>102[3]</room>
+			<professor>Замятина Е.Б.</professor>
+			<time start="9:40" finish="11:00"/>
+		</subject>
+
+		<subject type="практика">
+			<name>Технологии и алгоритмы высокопроизводительных вычислений</name>
+			<room>509[3]</room>
+			<professor>Замятина Е.Б.</professor>
+			<time start="11:30" finish="12:50"/>
+		</subject>
+	</weekday>
+	<weekday name="СР">
+		<subject type="практика">
+			<name>Средства BI для управления процессами и задачами</name>
+			<room>509[3]</room>
+			<professor>Комиссаров К.А.</professor>
+			<time start="8:10" finish="9:30"/>
+		</subject>
+		<subject type="лекция">
+			<name>Средства BI для управления процессами и задачами</name>
+			<room>102[3]</room>
+			<professor>Комиссаров К.А.</professor>
+			<time start="9:40" finish="11:00"/>
+		</subject>
+	</weekday>
+	<weekday name="ЧТ">
+		<subject type="практика">
+			<name>Проектирование архитектуры программ.систем</name>
+			<room>504[3]</room>
+			<professor>Банников Р.Ю.</professor>
+			<time start="13:10" finish="14:30"/>
+		</subject>
+		<subject type="практика">
+			<name>Академ. письмо на анг.языке</name>
+			<room>501[3]</room>
+			<professor>Туляков Д.С.</professor>
+			<time start="15:00" finish="16:20"/>
+		</subject>
+	</weekday>
+	<weekday name="ПТ">
+		<subject type="лекция">
+			<name>Интеллектуальные системы</name>
+			<room>дист.[0]</room>
+			<professor>Мухин О.И.</professor>
+			<time start="11:30" finish="12:50"/>
+		</subject>
+		<subject type="практика">
+			<name>Интеллектуальные системы</name>
+			<room>дист.[0]</room>
+			<professor>Мухин О.И.</professor>
+			<time start="13:10" finish="14:30"/>
+		</subject>
+		<subject type="лекция">
+			<name>Технологии анализа данных в сети Интернет</name>
+			<room>дист.[0]</room>
+			<professor>Ланин В.В.</professor>
+			<time start="15:00" finish="16:20"/>
+		</subject>
+		<subject type="практика">
+			<name>Технологии анализа данных в сети Интернет</name>
+			<room>дист.[0]</room>
+			<professor>Ланин В.В.</professor>
+			<time start="16:40" finish="18:00"/>
+		</subject>
+	</weekday>
+	<weekday name="СБ">
+		<subject type="лекция">
+			<name>Управление программными проектами</name>
+			<room>дист.[0]</room>
+			<professor>Климов Б.А.</professor>
+			<time start="11:30" finish="12:50"/>
+		</subject>
+	</weekday>
+</timetable>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab2"
+        mc:Ignorable="d"
+        Title="XMLApp" Height="450" Width="800">
+    <DockPanel LastChildFill="True">
+        <Grid x:Name="ButtonGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MinHeight="0"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" x:Name="btnXML" Content="XML" HorizontalContentAlignment="Left" Click="btnXML_Click"/>
+            <Button Grid.Column="0" Grid.Row="1" x:Name="btnDTD" Content="DTD" HorizontalContentAlignment="Left" Click="btnDTD_Click"/>
+            <Button Grid.Column="0" Grid.Row="2" x:Name="btnXMLSchema" Content="XMLSchema" HorizontalContentAlignment="Left" Click="btnXMLSchema_Click"/>
+            <Label Grid.Column="0" Grid.Row="3" x:Name="lblXPath" Content="XPath"/>
+            <Button Grid.Column="0" Grid.Row="4" x:Name="btnXPath1" Content="Занятия на данной неделе" HorizontalContentAlignment="Left" VerticalAlignment="Center" Click="btnXPath1_Click"/>
+            <Button Grid.Column="0" Grid.Row="5" x:Name="btnXPath2" Content="Аудитории, в которых проходят занятия" HorizontalContentAlignment="Left" Click="btnXPath2_Click"/>
+            <Button Grid.Column="0" Grid.Row="6" x:Name="btnXPath3" Content="Практические занятия на неделе" HorizontalContentAlignment="Left" Click="btnXPath3_Click"/>
+            <Button Grid.Column="0" Grid.Row="7" x:Name="btnXPath4" Content="Лекции, проводимые в указанной аудитории" HorizontalContentAlignment="Left" Click="btnXPath4_Click"/>
+            <Button Grid.Column="0" Grid.Row="8" x:Name="btnXPath5" Content="Преподаватели, проводящие практики в указанной аудитории" HorizontalContentAlignment="Left" Click="btnXPath5_Click"/>
+            <Button Grid.Column="0" Grid.Row="9" x:Name="btnXPath6" Content="Последнее занятие для каждого дня недели" HorizontalContentAlignment="Left" Click="btnXPath6_Click"/>
+            <Button Grid.Column="0" Grid.Row="10" x:Name="btnXPath7" Content="Общее количество занятий за всю неделю" HorizontalContentAlignment="Left" Click="btnXPath7_Click"/>
+            <Label Grid.Column="0" Grid.Row="11" x:Name="lblXSLT" Content="XSLT"/>
+            <Button Grid.Column="0" Grid.Row="12" x:Name="btnXSLTToTXT" Content="XSLT => TXT" HorizontalContentAlignment="Left" Click="btnXSLTToTXT_Click"/>
+            <Button Grid.Column="0" Grid.Row="13" x:Name="btnXSLTToHTML" Content="XSLT => HTML" HorizontalContentAlignment="Left" Click="btnXSLTToHTML_Click"/>
+        </Grid>
+        <WebBrowser x:Name="wbResult" DockPanel.Dock="Right" />
+    </DockPanel>
+
+</Window>
