@@ -8,7 +8,7 @@ namespace Lab2
 
         public XPathQuery() 
         {
-            XPathDocument docNav = new XPathDocument("C:\\StudyProjects\\VisualStudioProjects\\4_course_SoftwareDevelopment\\Lab2\\TimetableXML.xml");
+            XPathDocument docNav = new XPathDocument("..\\..\\..\\TimetableXML.xml");
             nav = docNav.CreateNavigator();
         }
 
