@@ -3,8 +3,6 @@ using System.Windows;
 using System.Xml.Xsl;
 using System;
 using System.Xml;
-using System.Xml.XPath;
-using System.Windows.Controls;
 
 namespace Lab2
 {
@@ -74,14 +72,14 @@ namespace Lab2
 
         private void btnXPath4_Click(object sender, RoutedEventArgs e)
         {
-            string result = xPathQuery.getAllLessonsInRoom("дист.[0]");
+            string result = xPathQuery.getAllLessonsInRoom(tbLectionRoom.Text);
             WriteToResultFile(result);
             wbResult.Navigate("file://" + path + "\\bin/Debug/net6.0-windows/result.txt");
         }
 
         private void btnXPath5_Click(object sender, RoutedEventArgs e)
         {
-            string result = xPathQuery.getAllProfessorsInRoom("дист.[0]");
+            string result = xPathQuery.getAllProfessorsInRoom(tbProfessorRoom.Text);
             WriteToResultFile(result);
             wbResult.Navigate("file://" + path + "\\bin/Debug/net6.0-windows/result.txt");
         }

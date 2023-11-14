@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="XMLApp" Height="450" Width="800">
     <DockPanel LastChildFill="True">
-        <Grid x:Name="ButtonGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,20,20">
+        <Grid x:Name="ButtonGrid" Margin="20,20,20,20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" MinHeight="0"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -31,8 +32,28 @@
             <Button Grid.Column="0" Grid.Row="4" x:Name="btnXPath1" Content="Занятия на данной неделе" HorizontalContentAlignment="Left" VerticalAlignment="Center" Click="btnXPath1_Click"/>
             <Button Grid.Column="0" Grid.Row="5" x:Name="btnXPath2" Content="Аудитории, в которых проходят занятия" HorizontalContentAlignment="Left" Click="btnXPath2_Click"/>
             <Button Grid.Column="0" Grid.Row="6" x:Name="btnXPath3" Content="Практические занятия на неделе" HorizontalContentAlignment="Left" Click="btnXPath3_Click"/>
-            <Button Grid.Column="0" Grid.Row="7" x:Name="btnXPath4" Content="Лекции, проводимые в указанной аудитории" HorizontalContentAlignment="Left" Click="btnXPath4_Click"/>
-            <Button Grid.Column="0" Grid.Row="8" x:Name="btnXPath5" Content="Преподаватели, проводящие практики в указанной аудитории" HorizontalContentAlignment="Left" Click="btnXPath5_Click"/>
+            <Grid Grid.Column="0" Grid.Row="7" x:Name="LectionRoomGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Grid.Row="0" x:Name="btnXPath4" Content="Лекции, проводимые в указанной аудитории" HorizontalContentAlignment="Left" Click="btnXPath4_Click"/>
+                <TextBox Grid.Column="1" Grid.Row="0" x:Name="tbLectionRoom" Text="дист.[0]"/>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="8" x:Name="ProfessorRoomGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Grid.Row="0" x:Name="btnXPath5" Content="Преподаватели, проводящие практики в указанной аудитории" HorizontalContentAlignment="Left" Click="btnXPath5_Click"/>
+                <TextBox Grid.Column="1" Grid.Row="0" x:Name="tbProfessorRoom" Text="дист.[0]" HorizontalAlignment="Left"/>
+            </Grid>
             <Button Grid.Column="0" Grid.Row="9" x:Name="btnXPath6" Content="Последнее занятие для каждого дня недели" HorizontalContentAlignment="Left" Click="btnXPath6_Click"/>
             <Button Grid.Column="0" Grid.Row="10" x:Name="btnXPath7" Content="Общее количество занятий за всю неделю" HorizontalContentAlignment="Left" Click="btnXPath7_Click"/>
             <Label Grid.Column="0" Grid.Row="11" x:Name="lblXSLT" Content="XSLT"/>
@@ -41,5 +62,4 @@
         </Grid>
         <WebBrowser x:Name="wbResult" DockPanel.Dock="Right" />
     </DockPanel>
-
 </Window>

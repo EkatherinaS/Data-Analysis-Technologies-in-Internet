@@ -1,3 +1,12 @@
-XPath: count(timetable/weekday/subject)
+XPath: timetable/weekday/subject[room='дист.[0]']/professor
 
-Общее количество занятий за всю неделю: 14
+<professor>Мухин О.И.</professor>
+
+<professor>Мухин О.И.</professor>
+
+<professor>Ланин В.В.</professor>
+
+<professor>Ланин В.В.</professor>
+
+<professor>Климов Б.А.</professor>
+
