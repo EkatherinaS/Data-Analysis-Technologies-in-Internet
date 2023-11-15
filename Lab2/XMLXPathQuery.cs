@@ -2,17 +2,17 @@
 
 namespace Lab2
 {
-    public class XPathQuery
+    public class XMLXPathQuery : IXPathQuery
     {
         XPathNavigator nav;
 
-        public XPathQuery() 
+        public XMLXPathQuery() 
         {
             XPathDocument docNav = new XPathDocument("..\\..\\..\\TimetableXML.xml");
             nav = docNav.CreateNavigator();
         }
 
-        private string getXPathResult(string xpath)
+        public string getXPathResult(string xpath)
         {
             XPathNodeIterator NodeIter = nav.Select(xpath);
             string result = "XPath: " + xpath + "\n\n";

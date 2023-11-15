@@ -7,4 +7,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties timetablejson_1json__JsonSchema="TimetableJSONSchema.json" /></VisualStudio></ProjectExtensions>
+
+  <ItemGroup>
+    <PackageReference Include="JsonSchema.Net" Version="5.3.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
 </Project>

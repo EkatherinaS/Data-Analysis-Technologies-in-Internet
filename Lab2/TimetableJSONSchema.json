@@ -1,0 +1,59 @@
+{
+  "properties": {
+    "timetable": {
+      "type": "object",
+      "properties": {
+        "weekday": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "enum": [ "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ" ]
+              },
+              "subject": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [ "лекция", "практика" ]
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "room": {
+                      "type": "string",
+                      "pattern": "(\\d+|[А-я]+.)\\[\\d+\\]"
+                    },
+                    "professor": {
+                      "type": "string",
+                      "pattern": "[А-Я][А-я]+ [А-Я].[А-Я]."
+                    },
+                    "time": {
+                      "type": "object",
+                      "properties": {
+                        "start": {
+                          "type": "string",
+                          "enum": [ "8:10", "9:40", "11:30", "13:10", "15:00", "16:40", "18:20" ]
+                        },
+                        "finish": {
+                          "type": "string",
+                          "enum": [ "9:30", "11:00", "12:50", "14:30", "16:20", "18:00", "19:40" ]
+                        }
+                      },
+                      "required": [ "start", "finish" ]
+                    }
+                  },
+                  "required": [ "type", "name", "room", "professor", "time" ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

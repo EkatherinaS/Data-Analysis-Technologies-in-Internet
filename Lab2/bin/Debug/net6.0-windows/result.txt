@@ -1,12 +1,7 @@
-XPath: timetable/weekday/subject[room='дист.[0]']/professor
+XPath теоретически:
+$.length - не поддерживается в c#
 
-<professor>Мухин О.И.</professor>
+XPath практически:
+$.timetable.weekday[*].subject[*] с использованием метода count()
 
-<professor>Мухин О.И.</professor>
-
-<professor>Ланин В.В.</professor>
-
-<professor>Ланин В.В.</professor>
-
-<professor>Климов Б.А.</professor>
-
+Общее количество занятий за всю неделю: 14

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab2"
         mc:Ignorable="d"
-        Title="XMLApp" Height="450" Width="800">
+        Title="XMLApp">
     <DockPanel LastChildFill="True">
         <Grid x:Name="ButtonGrid" Margin="20,20,20,20">
             <Grid.RowDefinitions>
@@ -24,15 +24,39 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Button Grid.Column="0" Grid.Row="0" x:Name="btnXML" Content="XML" HorizontalContentAlignment="Left" Click="btnXML_Click"/>
-            <Button Grid.Column="0" Grid.Row="1" x:Name="btnDTD" Content="DTD" HorizontalContentAlignment="Left" Click="btnDTD_Click"/>
-            <Button Grid.Column="0" Grid.Row="2" x:Name="btnXMLSchema" Content="XMLSchema" HorizontalContentAlignment="Left" Click="btnXMLSchema_Click"/>
-            <Label Grid.Column="0" Grid.Row="3" x:Name="lblXPath" Content="XPath"/>
-            <Button Grid.Column="0" Grid.Row="4" x:Name="btnXPath1" Content="Занятия на данной неделе" HorizontalContentAlignment="Left" VerticalAlignment="Center" Click="btnXPath1_Click"/>
-            <Button Grid.Column="0" Grid.Row="5" x:Name="btnXPath2" Content="Аудитории, в которых проходят занятия" HorizontalContentAlignment="Left" Click="btnXPath2_Click"/>
-            <Button Grid.Column="0" Grid.Row="6" x:Name="btnXPath3" Content="Практические занятия на неделе" HorizontalContentAlignment="Left" Click="btnXPath3_Click"/>
-            <Grid Grid.Column="0" Grid.Row="7" x:Name="LectionRoomGrid">
+            <Label Grid.Column="0" Grid.Row="0" x:Name="lblXML" Content="XML"/>
+            <Button Grid.Column="0" Grid.Row="1" x:Name="btnXML" Content="XML" HorizontalContentAlignment="Left" Click="btnXML_Click"/>
+            <Button Grid.Column="0" Grid.Row="2" x:Name="btnDTD" Content="DTD" HorizontalContentAlignment="Left" Click="btnDTD_Click"/>
+            <Button Grid.Column="0" Grid.Row="3" x:Name="btnXMLSchema" Content="XMLSchema" HorizontalContentAlignment="Left" Click="btnXMLSchema_Click"/>
+            <Button Grid.Column="0" Grid.Row="5" x:Name="btnXSLTToTXT" Content="XSLT: конвертировать в TXT" HorizontalContentAlignment="Left" Click="btnXSLTToTXT_Click"/>
+            <Button Grid.Column="0" Grid.Row="6" x:Name="btnXSLTToHTML" Content="XSLT: конвертировать в HTML" HorizontalContentAlignment="Left" Click="btnXSLTToHTML_Click"/>
+            <Label Grid.Column="0" Grid.Row="7" x:Name="lblJSON" Content="JSON" HorizontalContentAlignment="Left"/>
+            <Button Grid.Column="0" Grid.Row="8" x:Name="btnJSON" Content="JSON" HorizontalContentAlignment="Left" Click="btnJSON_Click"/>
+            <Button Grid.Column="0" Grid.Row="9" x:Name="btnJSONSchema" Content="JSONSchema" HorizontalContentAlignment="Left" Click="btnJSONSchema_Click"/>
+            <Grid Grid.Column="0" Grid.Row="10" x:Name="optionGrid" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" x:Name="lblXPath" Content="XPath"/>
+                <ComboBox Grid.Row="0" Grid.Column="1" x:Name="cbOption" SelectedIndex="0"
+                          SelectionChanged="cbOption_SelectionChanged" MinWidth="60">
+                    <ComboBoxItem Content="XML" Tag="xml"/>
+                    <ComboBoxItem Content="JSON" Tag="json"/>
+                </ComboBox>
+            </Grid>
+            <Button Grid.Column="0" Grid.Row="11" x:Name="btnXPath1" Content="Занятия на данной неделе" HorizontalContentAlignment="Left" VerticalAlignment="Center" Click="btnXPath1_Click"/>
+            <Button Grid.Column="0" Grid.Row="12" x:Name="btnXPath2" Content="Аудитории, в которых проходят занятия" HorizontalContentAlignment="Left" Click="btnXPath2_Click"/>
+            <Button Grid.Column="0" Grid.Row="13" x:Name="btnXPath3" Content="Практические занятия на неделе" HorizontalContentAlignment="Left" Click="btnXPath3_Click"/>
+            <Grid Grid.Column="0" Grid.Row="14" x:Name="LectionRoomGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
@@ -41,9 +65,9 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Grid.Row="0" x:Name="btnXPath4" Content="Лекции, проводимые в указанной аудитории" HorizontalContentAlignment="Left" Click="btnXPath4_Click"/>
-                <TextBox Grid.Column="1" Grid.Row="0" x:Name="tbLectionRoom" Text="дист.[0]"/>
+                <TextBox Grid.Column="1" Grid.Row="0" x:Name="tbLectionRoom" Text="дист.[0]" MinWidth="60"/>
             </Grid>
-            <Grid Grid.Column="0" Grid.Row="8" x:Name="ProfessorRoomGrid">
+            <Grid Grid.Column="0" Grid.Row="15" x:Name="ProfessorRoomGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
@@ -52,13 +76,10 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Grid.Row="0" x:Name="btnXPath5" Content="Преподаватели, проводящие практики в указанной аудитории" HorizontalContentAlignment="Left" Click="btnXPath5_Click"/>
-                <TextBox Grid.Column="1" Grid.Row="0" x:Name="tbProfessorRoom" Text="дист.[0]" HorizontalAlignment="Left"/>
+                <TextBox Grid.Column="1" Grid.Row="0" x:Name="tbProfessorRoom" Text="дист.[0]" HorizontalAlignment="Left" MinWidth="60"/>
             </Grid>
-            <Button Grid.Column="0" Grid.Row="9" x:Name="btnXPath6" Content="Последнее занятие для каждого дня недели" HorizontalContentAlignment="Left" Click="btnXPath6_Click"/>
-            <Button Grid.Column="0" Grid.Row="10" x:Name="btnXPath7" Content="Общее количество занятий за всю неделю" HorizontalContentAlignment="Left" Click="btnXPath7_Click"/>
-            <Label Grid.Column="0" Grid.Row="11" x:Name="lblXSLT" Content="XSLT"/>
-            <Button Grid.Column="0" Grid.Row="12" x:Name="btnXSLTToTXT" Content="XSLT => TXT" HorizontalContentAlignment="Left" Click="btnXSLTToTXT_Click"/>
-            <Button Grid.Column="0" Grid.Row="13" x:Name="btnXSLTToHTML" Content="XSLT => HTML" HorizontalContentAlignment="Left" Click="btnXSLTToHTML_Click"/>
+            <Button Grid.Column="0" Grid.Row="16" x:Name="btnXPath6" Content="Последнее занятие для каждого дня недели" HorizontalContentAlignment="Left" Click="btnXPath6_Click"/>
+            <Button Grid.Column="0" Grid.Row="17" x:Name="btnXPath7" Content="Общее количество занятий за всю неделю" HorizontalContentAlignment="Left" Click="btnXPath7_Click"/>
         </Grid>
         <WebBrowser x:Name="wbResult" DockPanel.Dock="Right" />
     </DockPanel>

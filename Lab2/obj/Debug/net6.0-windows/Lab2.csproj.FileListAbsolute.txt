@@ -19,3 +19,10 @@ C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\obj\Debu
 C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\obj\Debug\net6.0-windows\Lab2.pdb
 C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\obj\Debug\net6.0-windows\Lab2.genruntimeconfig.cache
 C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\obj\Debug\net6.0-windows\ref\Lab2.dll
+C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\bin\Debug\net6.0-windows\JetBrains.Annotations.dll
+C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\bin\Debug\net6.0-windows\Json.More.dll
+C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\bin\Debug\net6.0-windows\JsonPointer.Net.dll
+C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\bin\Debug\net6.0-windows\JsonSchema.Net.dll
+C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\obj\Debug\net6.0-windows\Lab2.csproj.CopyComplete
+C:\StudyProjects\VisualStudioProjects\4_course_SoftwareDevelopment\Lab2\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
