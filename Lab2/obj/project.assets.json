@@ -3023,11 +3023,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\StudyProjects\\VisualStudioProjects\\4_course_SoftwareDevelopment\\Lab2\\Lab2.csproj",
+      "projectUniqueName": "C:\\StudyProjects\\GitHubRepositories\\Data-Analysis-Technologies-in-Internet\\Lab2\\Lab2.csproj",
       "projectName": "Lab2",
-      "projectPath": "C:\\StudyProjects\\VisualStudioProjects\\4_course_SoftwareDevelopment\\Lab2\\Lab2.csproj",
+      "projectPath": "C:\\StudyProjects\\GitHubRepositories\\Data-Analysis-Technologies-in-Internet\\Lab2\\Lab2.csproj",
       "packagesPath": "C:\\Users\\Ekaterina\\.nuget\\packages\\",
-      "outputPath": "C:\\StudyProjects\\VisualStudioProjects\\4_course_SoftwareDevelopment\\Lab2\\obj\\",
+      "outputPath": "C:\\StudyProjects\\GitHubRepositories\\Data-Analysis-Technologies-in-Internet\\Lab2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ekaterina\\AppData\\Roaming\\NuGet\\NuGet.Config",

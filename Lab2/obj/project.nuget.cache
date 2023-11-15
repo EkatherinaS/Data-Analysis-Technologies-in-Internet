@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3slJNpnllVoOx0UdQWHdbfChd39b42IHZ8VsXoK5t2XhtPcZ6hkI+gdLFYolSngBpJmr93S6l7GuChOVVZs0PQ==",
+  "dgSpecHash": "Zcb7iMca9LrIn64ou1n6jp6AltYtjLMJPV5wAWbOToIQuw9QvF399INkqdyKmRH5w/roMjU0j0iCFJAOlEqWFA==",
   "success": true,
-  "projectFilePath": "C:\\StudyProjects\\VisualStudioProjects\\4_course_SoftwareDevelopment\\Lab2\\Lab2.csproj",
+  "projectFilePath": "C:\\StudyProjects\\GitHubRepositories\\Data-Analysis-Technologies-in-Internet\\Lab2\\Lab2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ekaterina\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Ekaterina\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

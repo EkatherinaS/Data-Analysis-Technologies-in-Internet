@@ -11,10 +11,11 @@ namespace Lab2
     {
 
         private JObject jsonObject;
+        string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
 
         public JSONXPathQuery()
         {
-            string jsonText = File.ReadAllText("C:\\StudyProjects\\VisualStudioProjects\\4_course_SoftwareDevelopment\\Lab2\\TimetableJSON.json");
+            string jsonText = File.ReadAllText(path + "\\TimetableJSON.json");
             jsonObject = JObject.Parse(jsonText);
         }
 
@@ -76,7 +77,6 @@ namespace Lab2
 
         public bool validateBySchema()
         {
-            string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
             string text = File.ReadAllText(path + "\\TimetableJSONSchema.json");
             JSchema schema = JSchema.Parse(text);
             return jsonObject.IsValid(schema);
