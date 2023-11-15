@@ -1,14 +1,7 @@
-﻿using Microsoft.SqlServer.Management.Sdk.Sfc;
-using System;
-using System.Configuration;
+﻿using System;
 using System.IO;
 using System.Xml.Schema;
 using System.Xml.XPath;
-using System;
-using System.IO;
-using System.Text;
-using System.Xml;
-using System.Xml.Schema;
 
 namespace Lab2
 {
@@ -16,7 +9,7 @@ namespace Lab2
     {
         XPathNavigator nav;
 
-        public XMLXPathQuery() 
+        public XMLXPathQuery()
         {
             XPathDocument docNav = new XPathDocument("..\\..\\..\\TimetableXML.xml");
             nav = docNav.CreateNavigator();

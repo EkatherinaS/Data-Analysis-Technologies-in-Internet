@@ -12,7 +12,8 @@ namespace Lab2
 
         private JObject jsonObject;
 
-        public JSONXPathQuery() {         
+        public JSONXPathQuery()
+        {
             string jsonText = File.ReadAllText("C:\\StudyProjects\\VisualStudioProjects\\4_course_SoftwareDevelopment\\Lab2\\TimetableJSON.json");
             jsonObject = JObject.Parse(jsonText);
         }

@@ -1,9 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows;
-using System.Xml.Xsl;
-using System;
 using System.Xml;
-using System.Xml.Linq;
+using System.Xml.Xsl;
 
 namespace Lab2
 {
