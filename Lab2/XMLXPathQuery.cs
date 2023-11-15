@@ -1,4 +1,14 @@
-﻿using System.Xml.XPath;
+﻿using Microsoft.SqlServer.Management.Sdk.Sfc;
+using System;
+using System.Configuration;
+using System.IO;
+using System.Xml.Schema;
+using System.Xml.XPath;
+using System;
+using System.IO;
+using System.Text;
+using System.Xml;
+using System.Xml.Schema;
 
 namespace Lab2
 {
@@ -65,6 +75,21 @@ namespace Lab2
             string result = "XPath: " + xpath + "\n\n";
             result += "Общее количество занятий за всю неделю: " + nav.Evaluate(xpath);
             return result;
+        }
+
+        public bool validateBySchema()
+        {
+            string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+            XmlSchemaSet schemaSet = new XmlSchemaSet();
+            schemaSet.Add(null, path + "\\TimetableXMLSchema.xsd");
+            try
+            {
+                return nav.CheckValidity(schemaSet, null);
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

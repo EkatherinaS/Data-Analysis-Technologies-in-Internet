@@ -1,7 +1,3 @@
-XPath теоретически:
-$.length - не поддерживается в c#
-
-XPath практически:
-$.timetable.weekday[*].subject[*] с использованием метода count()
+XPath: count(timetable/weekday/subject)
 
 Общее количество занятий за всю неделю: 14

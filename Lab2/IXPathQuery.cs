@@ -17,5 +17,7 @@
         public string getLastSubjects();
 
         public string getLessonAmount();
+
+        public bool validateBySchema();
     }
 }

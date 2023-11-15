@@ -14,18 +14,6 @@ namespace Lab2
         JSONXPathQuery jsonXPathQuery;
         IXPathQuery xPathQuery;
 
-
-        public static void CreateResultFile(string initialFile)
-        {
-            string text = File.ReadAllText(initialFile);
-            WriteToResultFile(text);
-        }
-        public static void WriteToResultFile(string text, string path = "result.txt")
-        {
-            File.WriteAllText(path, text);
-        }
-
-
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +23,19 @@ namespace Lab2
             CreateResultFile(path + "\\TimetableXML.xml");
             wbResult.Navigate("file://" + path + "\\bin/Debug/net6.0-windows/result.txt");
         }
+
+
+        public static void CreateResultFile(string initialFile, string additionalText = "")
+        {
+            string text = additionalText + File.ReadAllText(initialFile);
+            WriteToResultFile(text);
+        }
+
+        public static void WriteToResultFile(string text, string resultPath = "result.txt")
+        {
+            File.WriteAllText(resultPath, text);
+        }
+
 
         private void btnXML_Click(object sender, RoutedEventArgs e)
         {
@@ -50,7 +51,22 @@ namespace Lab2
 
         private void btnXMLSchema_Click(object sender, RoutedEventArgs e)
         {
-            CreateResultFile(path + "\\TimetableXMLSchema.xsd");
+            string validationResult = "Результат валидации: " + (xmlXPathQuery.validateBySchema() ? "успешно" : "с ошибками") + "\n\n";
+            CreateResultFile(path + "\\TimetableXMLSchema.xsd", validationResult);
+            wbResult.Navigate("file://" + path + "\\bin/Debug/net6.0-windows/result.txt");
+        }
+
+
+        private void btnJSON_Click(object sender, RoutedEventArgs e)
+        {
+            CreateResultFile(path + "\\TimetableJSON.json");
+            wbResult.Navigate("file://" + path + "\\bin/Debug/net6.0-windows/result.txt");
+        }
+
+        private void btnJSONSchema_Click(object sender, RoutedEventArgs e)
+        {
+            string validationResult = "Результат валидации: " + (jsonXPathQuery.validateBySchema() ? "успешно" : "с ошибками") + "\n\n";
+            CreateResultFile(path + "\\TimetableJSONSchema.json", validationResult);
             wbResult.Navigate("file://" + path + "\\bin/Debug/net6.0-windows/result.txt");
         }
 
@@ -93,34 +109,12 @@ namespace Lab2
             wbResult.Navigate("file://" + path + "\\TimetableHTML.html");
         }
 
-        private void btnJSON_Click(object sender, RoutedEventArgs e)
-        {
-            CreateResultFile(path + "\\TimetableJSON.json");
-            wbResult.Navigate("file://" + path + "\\bin/Debug/net6.0-windows/result.txt");
-
-        }
-
-        private void btnJSONSchema_Click(object sender, RoutedEventArgs e)
-        {
-            CreateResultFile(path + "\\TimetableJSONSchema.json");
-            wbResult.Navigate("file://" + path + "\\bin/Debug/net6.0-windows/result.txt");
-        }
-
 
         private void cbOption_SelectionChanged(object sender, RoutedEventArgs e)
         {
-            if (cbOption.SelectedIndex == 0)
-            {
-                xPathQuery = xmlXPathQuery;
-            }
-            else
-            {
-                xPathQuery = jsonXPathQuery;
-            }
-
+            if (cbOption.SelectedIndex == 0) xPathQuery = xmlXPathQuery;
+            else xPathQuery = jsonXPathQuery;
         }
-
-
 
         private void btnXPath1_Click(object sender, RoutedEventArgs e)
         {

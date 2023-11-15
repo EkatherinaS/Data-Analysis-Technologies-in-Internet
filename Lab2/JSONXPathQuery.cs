@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -69,6 +71,14 @@ namespace Lab2
             result += "XPath практически:\n" + xpath + " с использованием метода count()\n\n";
             result += "Общее количество занятий за всю неделю: " + jsonObject.SelectTokens(xpath).Count();
             return result;
+        }
+
+        public bool validateBySchema()
+        {
+            string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+            string text = File.ReadAllText(path + "\\TimetableJSONSchema.json");
+            JSchema schema = JSchema.Parse(text);
+            return jsonObject.IsValid(schema);
         }
     }
 }
